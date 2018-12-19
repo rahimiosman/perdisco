@@ -10,6 +10,7 @@ if [[ "$env" == "first_time" ]]; then
   printf "\n\n**** FINISHED INSTALLING COMPOSER ****\n\n"
   printf "\n\n**** SETTING UP THE ENV ****\n\n"
   mv .env.example .env
+  php artisan key:generate
   printf "\n]n**** FINISHED SETTING UP ENVIRONMENT ****\n\n"
 fi
 

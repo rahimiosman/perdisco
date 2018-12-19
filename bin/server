@@ -1,3 +1,18 @@
 #!/bin/bash
 
+env="$1"
+
+if [[ "$env" == "first_time" ]]; then
+  printf "\n**** CHANGING DIRECTORIES ****\n\n"
+  cd ../
+  pwd
+  printf "\n\n**** INSTALLING COMPOSER INTO THE REPOSITORY ****\n\n"
+  composer install
+  printf "\n\n**** FINISHED INSTALLING COMPOSER ****\n\n"
+  printf "\n\n**** SETTING UP THE ENV ****\n\n"
+  mv .env.example .env
+  printf "\n]n**** FINISHED SETTING UP ENVIRONMENT ****\n\n"
+fi
+
+printf "\n\n**** STARTING SERVER NOW ****\n\n"
 php artisan serve --host=0.0.0.0

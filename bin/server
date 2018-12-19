@@ -3,8 +3,7 @@
 env="$1"
 
 if [[ "$env" == "first_time" ]]; then
-  printf "\n**** CHANGING DIRECTORIES ****\n\n"
-  cd ../
+  printf "\n**** CURRENT DIRECTORIES ****\n\n"
   pwd
   printf "\n\n**** INSTALLING COMPOSER INTO THE REPOSITORY ****\n\n"
   composer install

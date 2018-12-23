@@ -11,6 +11,7 @@ if [[ "$env" == "first_time" ]]; then
   printf "\n\n**** SETTING UP THE ENV ****\n\n"
   mv .env.example .env
   php artisan key:generate
+  npm install
   printf "\n]n**** FINISHED SETTING UP ENVIRONMENT ****\n\n"
 fi
 
